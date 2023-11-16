@@ -1,4 +1,26 @@
-===================
+
+=:   Implementation    :=
+=========================
+
+  GameBoard.java is the controller. It handles the mouseclick events and redraws the board according
+  to what state the model is in (setup, battle, end). It also redraws the main grid where the
+  game is being played and handles the functionality of the buttons and status.
+
+  RunBattleship.java displays the main part of the GUI. It has an area that displays the grid,
+  as well as a control bar and a status bar. The control bar has buttons that call functions
+  handled by GameBoard.java, and the status bar is frequently updated to reflect the game state.
+
+  BattleShip.java is the main model of the game and it handles all of the logic. It handles the
+  game states, the computer turn, the player turn, the winners, and setting up the computer board
+  and the player's ships.
+
+  Move.java creates a move object, which stores 6 integers and has function to access them. The
+  integers are the indexes and the values in the 2D array where previous moves have been made.
+  This made it easy to store all of these values together in one object of the linked list and
+  access them all at once when undo was hit.
+
+  BattleshipTest.java contains JUnit tests for my functions in Battleship.java.
+  
 =: Core Concepts :=
 ===================
 
@@ -32,31 +54,6 @@
   depending on the situation.
 
 
-=========================
-=:   Implementation    :=
-=========================
-
-  GameBoard.java is the controller. It handles the mouseclick events and redraws the board according
-  to what state the model is in (setup, battle, end). It also redraws the main grid where the
-  game is being played and handles the functionality of the buttons and status.
-
-  RunBattleship.java displays the main part of the GUI. It has an area that displays the grid,
-  as well as a control bar and a status bar. The control bar has buttons that call functions
-  handled by GameBoard.java, and the status bar is frequently updated to reflect the game state.
-
-  BattleShip.java is the main model of the game and it handles all of the logic. It handles the
-  game states, the computer turn, the player turn, the winners, and setting up the computer board
-  and the player's ships.
-
-  Move.java creates a move object, which stores 6 integers and has function to access them. The
-  integers are the indexes and the values in the 2D array where previous moves have been made.
-  This made it easy to store all of these values together in one object of the linked list and
-  access them all at once when undo was hit.
-
-  BattleshipTest.java contains JUnit tests for my functions in Battleship.java.
-
-
-========================
 =: External Resources :=
 ========================
 
