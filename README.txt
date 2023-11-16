@@ -1,17 +1,6 @@
-=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
-CIS 1200 Game Project README
-PennKey: samitag
-=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
-
 ===================
 =: Core Concepts :=
 ===================
-
-- List the four core concepts, the features they implement, and why each feature
-  is an appropriate use of the concept. Incorporate the feedback you got after
-  submitting your proposal.
-
-    (I didn't receive any suggestions on my proposal.)
 
   1. 2D Arrays. I used them to implement a the player's board and the computer boards. They were
        appropriate to use because the game board required me to keep track of a location (index)
@@ -42,20 +31,10 @@ PennKey: samitag
   test various functions and then verify that the rest of the game state was changed or unchanged,
   depending on the situation.
 
-===============================
-=: File Structure Screenshot :=
-===============================
-- Include a screenshot of your project's file structure. This should include
-  all of the files in your project, and the folders they are in. You can
-  upload this screenshot in your homework submission to gradescope, named 
-  "file_structure.png".
 
 =========================
-=: Your Implementation :=
+=:   Implementation    :=
 =========================
-
-- Provide an overview of each of the classes in your code, and what their
-  function is in the overall game.
 
   GameBoard.java is the controller. It handles the mouseclick events and redraws the board according
   to what state the model is in (setup, battle, end). It also redraws the main grid where the
@@ -77,29 +56,9 @@ PennKey: samitag
   BattleshipTest.java contains JUnit tests for my functions in Battleship.java.
 
 
-- Were there any significant stumbling blocks while you were implementing your
-  game (related to your design, or otherwise)?
-  I had some trouble implementing the undo feature, especially keeping organized when the player
-  and computer moves should be updated. It was also tricky with file i/o, as I had to write/read
-  my LinkedList to make the moves
-
-
-- Evaluate your design. Is there a good separation of functionality? How well is
-  private state encapsulated? What would you refactor, if given the chance?
-
-  I think there is a good separation of functionality between the model and the GUI and all of my
-  variables in my model have getters and setters when appropriate. If I could refactor, I would like
-  to improve how my computer makes moves. I had some ideas for how to make the computer search
-  the board more effectively (to inform its next moves when it makes a hit), but I did not have the
-  time to implement.
-
-
-
 ========================
 =: External Resources :=
 ========================
 
-- Cite any external resources (images, tutorials, etc.) that you may have used 
-  while implementing your game.
     https://docs.oracle.com/javase/tutorial/index.html for learning the timers and the
     windows displaying the messages.
